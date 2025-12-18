@@ -1,0 +1,15 @@
+🛡️ Security Upgrades
+BCrypt Encryption: We have moved from SHA-256 to BCrypt, the industry standard for password security.
+IP Limits: Added a limit to the number of accounts allowed per IP address to prevent spam/alts.
+Mandatory Encryption: Security is no longer optional; it is always on.
+  
+✨ Player Experience (QoL)
+Session Management: Disconnected? You can now rejoin within a few minutes without needing to type your password again!
+Visual Improvements: Added a Blindness effect and a live Action Bar Countdown during the login phase for better immersion.
+Teleportation System: You will now be automatically teleported to a safe spawn point upon joining and returned to your last location after logging in.
+Tab Completion: Commands like /login and /register now support smoother auto-completion.
+  
+⚙️ Administrative Changes
+New Command: The main admin command has changed from /loginsys-adm to /pureauth.
+Management Tools: Added commands to set Login/Register locations, force-login players, view detailed player info, and manage passwords directly.
+Stats & Optimization: Improved database handling and performance statistics.
