@@ -1,0 +1,15 @@
+This update focuses on hardening server security and adding multi-language support.
+  
+🛡️ Advanced Security
+Captcha System: New players must now enter a 5-character verification code (displayed in chat) during registration to prevent bot attacks.
+Configurable length and character set.
+Online-Mode Fail-Safe: The plugin now detects if online-mode is set to true in server.properties. If detected, it immediately blocks all connections to prevent UUID spoofing exploits on networks designed for offline usage.
+Safe Mode: Added a safe_mode switch in the config. When enabled, dangerous administrative commands (Force Login, Unregister, Set Password) can only be executed from the server console.
+  
+🌍 Localization (New!)
+Dual Language Support: You can now switch the plugin language between English (EN) and Polish (PL) directly in the config.yml.
+  
+🔧 Admin Tools & Configuration
+Admin Registration: Added /pureauth register <player> <password> allowing admins to manually register accounts for players.
+Expanded Stats: The /pureauth stats command (Console only) now displays every single configuration setting, including Safe Mode status, Captcha settings, and Session limits.
+Blindness Toggle: You can now disable the blindness effect during login via the configuration file.
