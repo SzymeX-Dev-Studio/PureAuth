@@ -1,0 +1,85 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  ---| USER MANUAL (v1.3) |---
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+--- 1. /register
+Command: /register <password> <password> [captcha]
+Description: Registers a new account.
+Note: If Captcha is enabled, a code will appear in the chat which must be entered as the 3rd argument.
+
+--- 2. /login
+Command: /login <password>
+Description: Logs the player into their account.
+
+--- 3. /changepass
+Command: /changepass <old password> <new password> <new password>
+Description: Allows a logged-in player to change their password.
+
+--- 4. /pureauth
+Command: /pureauth
+Description: [ADMINS ONLY] Displays the help menu with a list of available administrative commands.
+
+--- 5. /pureauth reload
+Command: /pureauth reload
+Description: Reloads the plugin configuration (messages, settings, and language) without restarting the server.
+
+--- 6. /pureauth unregister
+Command: /pureauth unregister <player>
+Description: Deletes a player's account from the database.
+(Subject to SAFE-MODE restrictions).
+
+--- 7. /pureauth register
+Command: /pureauth register <player> <password>
+Description: [ADMIN] Manually registers an account for a player (online or offline).
+(Subject to SAFE-MODE restrictions).
+
+--- 8. /pureauth forcelogin
+Command: /pureauth forcelogin <player>
+Description: Forcefully logs in a specific player (bypassing the password requirement).
+(Subject to SAFE-MODE restrictions).
+
+--- 9. /pureauth location
+Command: /pureauth location <login|register>
+Description: Sets the global teleport location for authentication.
+
+'login': Where players are teleported when they join and need to log in.
+
+'register': Where unregistered players are teleported.
+(Note: Set this at your current physical position).
+
+--- 10. /pureauth info
+Command: /pureauth info <player>
+Description: Displays detailed information about a player: Registration IP, Last Login IP, and Last Login Timestamp.
+
+--- 11. /pureauth setpassword
+Command: /pureauth setpassword <player> <new password>
+Description: Administratively changes a player's password (does not require the old password).
+(Subject to SAFE-MODE restrictions).
+
+--- 12. /pureauth accounts
+Command: /pureauth accounts <IP>
+Description: Lists all usernames registered to a specific IP address.
+
+--- 13. /pureauth stats
+Command: /pureauth stats
+Description: [CONSOLE ONLY] Displays a comprehensive report of the plugin status, including total users, database connection, and EVERY configuration setting (Safe Mode status, Captcha settings, Timeouts, etc.).
+
+--- Configuration & System Notes ---
+
+To change messages, colors, login duration, max attempts, session time, and IP limits – see the config.yml configuration file.
+
+New Features in v1.3:
+
+Language Support: Switch between EN (English) and PL (Polish) in config.yml.
+
+Captcha System: Adds a required verification code during registration (can be disabled).
+
+Safe Mode: If enabled, sensitive admin commands (register, unregister, forcelogin, setpassword) are blocked in-game and only work from the Console.
+
+Blindness Toggle: Option to enable/disable the blindness effect during login.
+
+Fail-Safe: The plugin automatically blocks connections if online-mode=true is detected in server.properties.
+
+The plugin is for Minecraft version 1.21.4.
+The plugin was programmed with the Paper engine in mind.
+The plugin was written using JDK-21.
