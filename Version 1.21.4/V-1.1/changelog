@@ -10,6 +10,6 @@ Teleportation System: You will now be automatically teleported to a safe spawn p
 Tab Completion: Commands like /login and /register now support smoother auto-completion.
   
 ⚙️ Administrative Changes
-New Command: The main admin command has changed from /loginsys-adm to /pureauth.
+New Command: The main admin command has been changed from /loginsys-adm to /pureauth.
 Management Tools: Added commands to set Login/Register locations, force-login players, view detailed player info, and manage passwords directly.
 Stats & Optimization: Improved database handling and performance statistics.
