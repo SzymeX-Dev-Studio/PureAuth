@@ -1,0 +1,33 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+     ---| USER MANUAL |---
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+--- 1. /register
+Command: /register <password> <password>
+Description: Command to register
+
+--- 2. /login
+Command: /login <password>
+Description: Login command
+
+--- 3. /changepass
+Command: /changepass <old password> <new password> <new password>
+Description: Password change command
+
+--- 4. /loginsys-adm
+Command: /loginsys-adm [ADMINS ONLY]
+Description: Shows a list of administration commands
+
+--- 5. /loginsys-adm reload
+Command: /loginsys-adm reload
+Description: Reloads the plugin
+
+--- 6. /loginsys-adm reset
+Command: /loginsys-adm reset <player>
+Description: Unregisters a player
+
+To change messages, colors, login duration, and login attempts – see the config.yml configuration file.
+
+The plugin is for Minecraft version 1.21.4. 
+The plugin was programmed with the Paper engine in mind. 
+The plugin was written using JDK-21.
