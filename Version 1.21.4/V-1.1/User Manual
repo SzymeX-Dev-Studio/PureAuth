@@ -1,0 +1,68 @@
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+      ---| USER MANUAL |---
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+--- 1. /register
+Command: /register <password> <password>
+Description: Registers a new account. The player must enter the password twice to confirm.
+
+--- 2. /login
+Command: /login <password>
+Description: Logs the player into their account.
+
+--- 3. /changepass
+Command: /changepass <old password> <new password> <new password>
+Description: Allows a logged-in player to change their password.
+
+--- 4. /pureauth
+Command: /pureauth
+Description: [ADMINS ONLY] Displays the help menu with a list of available administrative commands.
+
+--- 5. /pureauth reload
+Command: /pureauth reload
+Description: Reloads the plugin configuration (messages and settings) without restarting the server.
+
+--- 6. /pureauth unregister
+Command: /pureauth unregister <player>
+Description: Deletes a player's account from the database (replaces the old 'reset' command).
+
+--- 7. /pureauth forcelogin
+Command: /pureauth forcelogin <player>
+Description: Forcefully logs in a specific player (bypassing the password requirement).
+
+--- 8. /pureauth location
+Command: /pureauth location <login|register>
+Description: Sets the global teleport location for authentication.
+'login': Where players are teleported when they join and need to log in.
+'register': Where unregistered players are teleported.
+(Note: Set this at your current physical position).
+
+--- 9. /pureauth info
+Command: /pureauth info <player>
+Description: Displays detailed information about a player: Registration IP, Last Login IP, and Last Login Timestamp.
+
+--- 10. /pureauth setpassword
+Command: /pureauth setpassword <player> <new password>
+Description: Administratively changes a player's password (does not require the old password).
+
+--- 11. /pureauth accounts
+Command: /pureauth accounts <IP>
+Description: Lists all usernames registered to a specific IP address.
+
+--- 12. /pureauth stats
+Command: /pureauth stats
+Description: [CONSOLE ONLY] Displays technical statistics: Total registered users, database status, and active configuration limits.
+
+--- Configuration & System Notes ---
+To change messages, colors, login duration, max attempts, session time, and IP limits – see the config.yml configuration file.
+New Features:
+Session Management: Players rejoining quickly (default 1 min) do not need to re-login.
+IP Limiting: Limits the number of accounts per IP (default 3).
+
+Security: All passwords are now encrypted using BCrypt.
+
+The plugin is for Minecraft version 1.21.4.
+
+The plugin was programmed with the Paper engine in mind.
+
+The plugin was written using JDK-21.
