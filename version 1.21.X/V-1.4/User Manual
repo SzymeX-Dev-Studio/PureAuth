@@ -80,6 +80,6 @@ Blindness Toggle: Option to enable/disable the blindness effect during login.
 
 Fail-Safe: The plugin automatically blocks connections if online-mode=true is detected in server.properties.
 
-The plugin is for Minecraft version 1.21.4.
+The plugin is for Minecraft version 1.21.X.
 The plugin was programmed with the Paper engine in mind.
 The plugin was written using JDK-21.
