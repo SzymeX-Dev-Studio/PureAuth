@@ -68,7 +68,7 @@ Description: [CONSOLE ONLY] Displays a comprehensive report of the plugin status
 
 To change messages, colors, login duration, max attempts, session time, and IP limits – see the config.yml configuration file.
 
-New Features in v1.3:
+New Features in v1.4:
 
 Language Support: Switch between EN (English) and PL (Polish) in config.yml.
 
