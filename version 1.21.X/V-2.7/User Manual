@@ -1,0 +1,74 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+---|   USER MANUAL (v2.7)   |---
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+--- PLAYER COMMANDS ---
+
+1. /register
+   Command: /register <password> <password> [captcha]
+   Description: Registers a new account.
+   Note: If Captcha is enabled, you must type the code displayed in chat.
+
+2. /login
+   Command: /login <password>
+   Description: Logs you into the server.
+
+3. /changepass
+   Command: /changepass <old password> <new password> <new password>
+   Description: Changes your current password.
+
+--- ADMIN COMMANDS (Permission: pureauth.admin) ---
+
+4. /pureauth
+   Command: /pureauth
+   Description: Displays the list of administrative commands.
+
+5. /pureauth reload
+   Command: /pureauth reload
+   Description: Reloads the configuration file and language settings.
+
+6. /pureauth unlock
+   Command: /pureauth unlock <player>
+   Description: Unblocks an account that was locked due to too many failed attempts.
+   Note: This resets the player's kick count to 0.
+
+7. /pureauth unregister
+   Command: /pureauth unregister <player>
+   Description: Deletes a player's account from the database.
+
+8. /pureauth register
+   Command: /pureauth register <player> <password>
+   Description: Manually registers an account for a player (useful for bedrock players).
+
+9. /pureauth forcelogin
+   Command: /pureauth forcelogin <player>
+   Description: Forcefully logs in an online player, bypassing the password check.
+
+10. /pureauth setpassword
+    Command: /pureauth setpassword <player> <new password>
+    Description: Changes a player's password without needing the old one.
+
+11. /pureauth info
+    Command: /pureauth info <player>
+    Description: Displays account details: Registration IP, Last Login, Lock Status.
+
+12. /pureauth accounts
+    Command: /pureauth accounts <IP>
+    Description: Lists all usernames registered to a specific IP address.
+
+13. /pureauth location
+    Command: /pureauth location <login|register>
+    Description: Sets the teleport spawn points for unauthenticated players.
+
+14. /pureauth stats
+    Command: /pureauth stats
+    Description: [CONSOLE ONLY] Displays a technical report of the plugin status.
+
+--- SYSTEM CONFIGURATION NOTES ---
+
+- Security: Passwords are hashed using BCrypt.
+- Session Management: If enabled, players rejoining quickly do not need to re-login.
+- Fail-Safe: The plugin will automatically disable itself if 'online-mode' is set to TRUE in server.properties to prevent configuration errors.
+- Webhooks: To use Discord alerts, paste your Webhook URL into config.yml and set enabled: true.
+
+Developed by SzymeX Dev Studio.
