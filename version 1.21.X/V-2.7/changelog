@@ -1,0 +1,21 @@
+Summary: This update focuses on hardening server security and administrative control. We have removed the experimental Premium Auto-Login features to ensure maximum stability and zero data loss, while introducing powerful brute-force protection and external integrations.
+🔒 Brute-Force Protection (Account Locking)
+Automatic Locking: If a player is kicked 3 times (default) for entering the wrong password, their account is permanently LOCKED.
+Behavior: Locked players can join but cannot move, chat, or execute commands. They will see a "Blocked" screen.
+Resolution: Admins must use /pureauth unlock <player> to restore access.
+🤖 Captcha System
+New players must enter a random 5-character alphanumeric code during registration to prevent bot attacks.
+Configurable in config.yml.
+🔔 Discord Webhook Integration
+The plugin can now send alerts to a Discord channel for:
+Failed login attempts (Kicks).
+Account Lockouts.
+Administrative actions (Unregister, Force Login, Password Changes).
+🛡️ Safe Mode
+Added a safe_mode switch in the config. When enabled, sensitive admin commands (like changing passwords or unregistering players) are blocked in-game and can only be executed from the Server Console.
+🌍 Localization
+Full support for English (EN) and Polish (PL). Switch languages instantly in the config.
+🛠️ Admin Tools
+New: /pureauth unlock <player> - Unblocks a locked account.
+New: /pureauth register <player> <password> - Manually register a player.
+Improved: /pureauth stats - Displays detailed configuration status.
