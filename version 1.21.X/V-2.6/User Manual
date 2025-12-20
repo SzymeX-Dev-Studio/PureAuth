@@ -1,0 +1,88 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+---|   USER MANUAL (v2.6)   |---
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+--- PLAYER COMMANDS ---
+
+1. /register
+   Command: /register <password> <password> [captcha]
+   Description: Registers a new account.
+   Note: If Captcha is enabled, enter the code displayed in chat as the 3rd argument.
+
+2. /login
+   Command: /login <password>
+   Description: Logs the player into their account.
+
+3. /changepass
+   Command: /changepass <old password> <new password> <new password>
+   Description: Allows a logged-in player to change their password.
+
+4. /premium
+   Command: /premium
+   Description: Verifies your account with Mojang. If successful, enables Auto-Login
+   for future connections (skips password).
+
+5. /cracked
+   Command: /cracked
+   Description: Disables Auto-Login. You will be required to enter your password
+   every time you join.
+
+--- ADMIN COMMANDS (Permission: pureauth.admin) ---
+
+6. /pureauth
+   Command: /pureauth
+   Description: Displays the help menu with all available subcommands.
+
+7. /pureauth reload
+   Command: /pureauth reload
+   Description: Reloads the configuration (messages, settings, and database connection).
+
+8. /pureauth unregister
+   Command: /pureauth unregister <player>
+   Description: Completely deletes a player's account from the database.
+
+9. /pureauth register
+   Command: /pureauth register <player> <password>
+   Description: Manually registers an account for a player (useful for bedrock/console players).
+
+10. /pureauth forcelogin
+    Command: /pureauth forcelogin <player>
+    Description: Forcefully logs in a player, bypassing password and lock checks.
+
+11. /pureauth unlock
+    Command: /pureauth unlock <player>
+    Description: Unblocks an account that was locked due to too many failed login attempts.
+    Note: This will kick the player to reset their login state.
+
+12. /pureauth setpassword
+    Command: /pureauth setpassword <player> <new password>
+    Description: Administratively changes a player's password (does not require the old one).
+
+13. /pureauth info
+    Command: /pureauth info <player>
+    Description: Displays advanced info: Registration IP, Last IP, Premium Status, Lock Status, and Kick Count.
+
+14. /pureauth accounts
+    Command: /pureauth accounts <IP>
+    Description: Lists all usernames registered to a specific IP address.
+
+15. /pureauth location
+    Command: /pureauth location <login|register>
+    Description: Sets the global teleport points.
+    - 'login': Spawn for unauthenticated registered players.
+    - 'register': Spawn for new players.
+
+16. /pureauth stats
+    Command: /pureauth stats
+    Description: [CONSOLE ONLY] Displays a full technical report of the plugin status and settings.
+
+--- SYSTEM NOTES ---
+
+- Premium Auto-Login: Requires ProtocolLib. Uses UUID Spoofing to ensure
+  inventory data is saved under the Offline UUID, preventing item loss.
+- Account Locking: By default, 3 kicks (9 wrong passwords) will lock an account.
+- Safe Mode: If enabled in config, admin commands listed above will be blocked
+  in-game and can only be used from the Console.
+
+The plugin is for Minecraft version 1.21.X (Paper). JDK-21.
+Developed by SzymeX Dev Studio.
