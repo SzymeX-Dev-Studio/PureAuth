@@ -5,3 +5,15 @@ Upload it to your /plugins folder.
 Note: You can now remove ProtocolLib if it's not required by your other plugins.
 
 Restart the server. PureAuth is now a standalone security solution.
+
+2. Initial Configuration
+Navigate to the /plugins/PureAuth folder and open config.yml.
+
+Database: The default is SQLITE. For larger networks, change this to MYSQL and fill in your credentials.
+
+Discord: To enable alerts, set enabled: true and paste your link into webhook_url.
+
+3. Activation
+After saving the file, type /pureauth reload ingame or in the console.
+
+Done! Your server is now secured by PureAuth.
