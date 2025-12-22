@@ -1,0 +1,7 @@
+Download PureAuth-V2.7.jar.
+
+Upload it to your /plugins folder.
+
+Note: You can now remove ProtocolLib if it's not required by your other plugins.
+
+Restart the server. PureAuth is now a standalone security solution.
