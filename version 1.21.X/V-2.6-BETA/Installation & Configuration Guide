@@ -1,0 +1,20 @@
+1. Installation
+Download PureAuth.jar and the ProtocolLib plugin (this is mandatory for identity verification features).
+
+Upload both files to the /plugins folder on your server.
+
+Restart the server (using /reload is not recommended for the initial setup).
+
+2. Initial Configuration
+Navigate to the /plugins/PureAuth folder and open config.yml.
+
+Database: The default is SQLITE. For larger networks, change this to MYSQL and fill in your credentials.
+
+Discord: To enable alerts, set enabled: true and paste your link into webhook_url.
+
+Auto-Login: Under the premium_login section, ensure enabled: true is set.
+
+3. Activation
+After saving the file, type /pureauth reload ingame or in the console.
+
+Done! Your server is now secured by PureAuth.
