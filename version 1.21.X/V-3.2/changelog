@@ -1,0 +1,17 @@
+🎨 Visual & Logging Upgrades (Discord)
+Rich Embeds: Discord notifications are no longer plain text. They now use Professional Embeds with color coding:
+🟢 Green: Server Start, Successful Logins, Unlocks.
+🟠 Orange: Failed Login Attempts, Password Changes.
+🔴 Red: Server Stop, Account Lockouts, Unregistering users.
+🔵 Blue: Premium Status Changes.
+Full Audit Logging: Every administrative action is now logged to Discord (Force Login, Set Password, Unregister, etc.), not just security breaches.
+💎 Premium Auto-Login (Refined)
+ProtocolLib Removed: The plugin no longer requires ProtocolLib to function. It now uses a stable IP-Trust System.
+Logic Change:
+Players use /premium to verify their account with Mojang API.
+The plugin saves their current IP address.
+Auto-Login only occurs if the player joins from that exact trusted IP.
+If the IP changes, the plugin falls back to requesting a password for security.
+🛡️ Administrative Improvements
+Smart Command Feedback: Admin commands (like /pureauth setpassword) now display correct usage examples if arguments are missing, rather than failing silently.
+Unknown Command Handling: Typing an invalid subcommand now returns a helpful error message instead of doing nothing.
