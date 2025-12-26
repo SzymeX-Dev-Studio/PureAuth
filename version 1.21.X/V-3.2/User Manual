@@ -1,0 +1,89 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+---|   USER MANUAL (v3.2)   |---
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+--- PLAYER COMMANDS ---
+
+1. /register
+   Command: /register <password> <password> [captcha]
+   Description: Registers a new account.
+   Note: If Captcha is enabled, you must type the code displayed in chat.
+
+2. /login
+   Command: /login <password>
+   Description: Logs you into the server.
+
+3. /changepass
+   Command: /changepass <old password> <new password> <new password>
+   Description: Changes your current password.
+
+4. /premium
+   Command: /premium
+   Description: Enables Auto-Login for Premium Minecraft accounts.
+   How it works: The plugin verifies your account with Mojang and saves your IP.
+   Future logins from this IP will skip the password check.
+
+5. /cracked
+   Command: /cracked
+   Description: Disables Premium Auto-Login. You will be required to enter
+   your password every time you join.
+
+--- ADMIN COMMANDS (Permission: pureauth.admin) ---
+
+6. /pureauth
+   Command: /pureauth
+   Description: Displays the list of administrative commands.
+
+7. /pureauth unlock
+   Command: /pureauth unlock <player>
+   Description: Unblocks an account that was locked due to brute-force protection.
+   Note: This command resets the player's failed attempt counter.
+
+8. /pureauth forcelogin
+   Command: /pureauth forcelogin <player>
+   Description: Forcefully logs in an online player, bypassing password and lock checks.
+   (Logs to Discord).
+
+9. /pureauth setpassword
+    Command: /pureauth setpassword <player> <new password>
+    Description: Changes a player's password without needing the old one.
+    (Logs to Discord).
+
+10. /pureauth unregister
+    Command: /pureauth unregister <player>
+    Description: Deletes a player's account from the database.
+    (Logs to Discord).
+
+11. /pureauth register
+    Command: /pureauth register <player> <password>
+    Description: Manually registers an account for a player.
+
+12. /pureauth info
+    Command: /pureauth info <player>
+    Description: Displays account details: Registration IP, Last Login, Premium Status, Lock Status.
+
+13. /pureauth accounts
+    Command: /pureauth accounts <IP>
+    Description: Lists all usernames registered to a specific IP address.
+
+14. /pureauth location
+    Command: /pureauth location <login|register>
+    Description: Sets the global teleport spawn points for unauthenticated players.
+
+15. /pureauth reload
+    Command: /pureauth reload
+    Description: Reloads the configuration file and language settings.
+
+16. /pureauth stats
+    Command: /pureauth stats
+    Description: [CONSOLE ONLY] Displays a technical report of the plugin status
+    and active security settings.
+
+--- SYSTEM CONFIGURATION NOTES ---
+
+- Security: Passwords are hashed using BCrypt.
+- Account Locking: By default, 3 kicks (9 wrong password attempts) will PERMANENTLY lock an account until an admin unlocks it.
+- Safe Mode: If 'safe_mode: true' is set in config, sensitive commands (unregister, setpassword, etc.) are blocked in-game.
+- Discord: Webhook URL must be configured in config.yml for logs to appear.
+
+Developed by SzymeX Dev Studio.
