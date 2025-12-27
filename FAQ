@@ -1,0 +1,27 @@
+Which Minecraft versions are supported? The plugin is optimized for 1.20.x+ versions on Paper and Purpur engines.
+
+Can I disable the Math Captcha? Yes, it can be toggled on or off at any time in the config.yml.
+
+How can a player change their password? By using the /changepassword <old> <new> command after a successful login.
+
+What happens after multiple failed login attempts? The Strike System will automatically trigger a Security Lock to prevent Brute-Force attacks.
+
+Do I need a Discord Bot for Webhooks? No, the plugin sends data directly via the Webhook URL – no extra bots required.
+
+Can I customize in-game messages? Yes, PureAuth allows full customization of all messages in the configuration files.
+
+What happens if I change my IP with Auto-Login enabled? The IP-Trust system detects the change and prompts for a password. Once logged in, the new IP is saved as trusted.
+
+Can an admin change a player's password? Yes, admins can use the console command: /pureauth setpassword <player> <new_password>.
+
+Which databases are supported? You can choose between local SQLite (zero config) or MySQL/MariaDB for larger networks.
+
+Are passwords in the database secure? Yes, all passwords are one-way encrypted using BCrypt industry standards.
+
+Does this plugin require ProtocolLib? No. PureAuth is fully standalone and uses a custom IP-Trust system.
+
+How does Premium Auto-Login work? The plugin verifies your account via Mojang API. If you join from a trusted IP, you are logged in automatically. If your IP changes, a password is required for security.
+
+What if I lose my 2FA device? For security reasons, only a Server Administrator can reset your 2FA using a dedicated console command.
+
+Does it affect server performance? No. Using HikariCP, all database operations (MySQL/SQLite) are handled asynchronously, ensuring zero impact on server TPS.
