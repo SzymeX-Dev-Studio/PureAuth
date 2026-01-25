@@ -28,7 +28,7 @@ settings:
     # Security: Only auto-login if the IP matches the last saved IP.
     require_same_ip: true
 
-  # --- BACKUP SYSTEM (Missing in previous config) ---
+  # --- BACKUP SYSTEM ---
   # Automatically saves database.db or exports MySQL data.
   backup:
     enabled: true
