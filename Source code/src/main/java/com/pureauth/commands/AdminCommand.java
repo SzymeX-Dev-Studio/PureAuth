@@ -36,7 +36,6 @@ public class AdminCommand implements CommandExecutor, TabCompleter {
         }
         
         // --- LOGGING ---
-        // We log every attempt to use /pureauth commands by an admin
         String fullCommand = "/pureauth " + String.join(" ", args);
         plugin.getLogManager().logAction(sender.getName(), fullCommand);
         // ----------------
