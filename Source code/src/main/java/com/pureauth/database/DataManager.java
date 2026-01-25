@@ -74,7 +74,7 @@ public class DataManager {
         try (Connection conn = dataSource.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.executeUpdate();
             
-            // Migrations (Add columns if missing from older versions)
+            // Migrations
             tryAddColumn(conn, "is_premium", "BOOLEAN DEFAULT FALSE");
             tryAddColumn(conn, "is_locked", "BOOLEAN DEFAULT FALSE");
             tryAddColumn(conn, "kick_count", "INT DEFAULT 0");
@@ -91,7 +91,7 @@ public class DataManager {
         } catch (SQLException ignored) {}
     }
 
-    // --- BACKUP HELPER (Used by BackupManager) ---
+    // --- BACKUP HELPER ---
     public void performBackupDump(FileWriter writer, String tableName) throws SQLException, IOException {
         try (Connection conn = dataSource.getConnection();
              PreparedStatement ps = conn.prepareStatement("SELECT * FROM " + tableName)) {
