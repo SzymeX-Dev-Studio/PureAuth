@@ -30,7 +30,7 @@ public class PureAuthExpansion extends PlaceholderExpansion {
 
     @Override
     public boolean persist() {
-        return true; // Keep the expansion registered
+        return true;
     }
 
     @Override
@@ -39,7 +39,6 @@ public class PureAuthExpansion extends PlaceholderExpansion {
 
         // %pureauth_logged%
         if (params.equalsIgnoreCase("logged")) {
-            // Check if player is online and in the loggedInPlayers set
             if (player.isOnline() && player.getPlayer() != null) {
                 return String.valueOf(plugin.isLoggedIn(player.getPlayer()));
             }
