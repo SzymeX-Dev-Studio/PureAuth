@@ -76,17 +76,16 @@ public class PlayerListener implements Listener {
                     );
                     p.showTitle(title);
                     p.sendMessage(Utils.format(plugin.getMessage("prefix") + plugin.getMessage("error_locked_chat")));
-                    // Blindness already applied by hidePlayerState
                 });
                 return;
             }
 
-            // 4. AUTO LOGIN (IP Trust) - REMOVED LOCALHOST BLOCK
+            // 4. AUTO LOGIN
             if (isReg && plugin.getConfig().getBoolean("settings.premium_login.enabled")) {
                 if (plugin.getDataManager().isPremium(p.getUniqueId())) {
                     String lastIp = plugin.getDataManager().getLastIp(p.getUniqueId());
                     
-                    // Standard IP Check (Works on Localhost now too)
+                    // Standard IP Check
                     if (lastIp != null && lastIp.equals(ip)) {
                         plugin.getDataManager().updateLoginInfo(p.getUniqueId(), ip);
                         plugin.getServer().getScheduler().runTask(plugin, () -> {
@@ -96,7 +95,7 @@ public class PlayerListener implements Listener {
                             Location lastLoc = plugin.getDataManager().getLastLocation(p.getUniqueId());
                             if (lastLoc != null) p.teleport(lastLoc);
                         });
-                        return; // DONE
+                        return;
                     } else {
                         // IP Mismatch
                         p.sendMessage(Utils.format(plugin.getMessage("prefix") + plugin.getMessage("premium_ip_changed")));
