@@ -7,10 +7,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
- * Lightweight TOTP (Time-based One-Time Password) implementation.
- * Compatible with Google Authenticator.
- */
 public class TOTP {
 
     private static final int PASS_CODE_LENGTH = 6;
@@ -47,7 +43,6 @@ public class TOTP {
         int code = Integer.parseInt(codeInput);
         long currentInterval = System.currentTimeMillis() / 1000 / INTERVAL;
         
-        // Check current, previous, and next interval to account for slight time drift
         for (int i = -1; i <= 1; i++) {
             if (generateTOTP(secret, currentInterval + i) == code) {
                 return true;
