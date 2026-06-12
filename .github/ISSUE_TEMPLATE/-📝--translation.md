@@ -1,5 +1,5 @@
 ---
-name: "[📝] Translation"
+name: "[📝] Translation error"
 about: Translation error reporting
 title: "[TRANSLATION]"
 labels: translation
