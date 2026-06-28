@@ -7,7 +7,8 @@ Supported versions will receive security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.3.7   |         YES        |
+| 5.3.8   |         YES        |
+| 5.3.7   |         NO         |
 | 5.3.6   |         NO         |
 | 5.2.4   |         NO         |
 | 5.1.3   |         NO         |
