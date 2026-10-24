@@ -49,7 +49,7 @@ After password or PIN verification, accounts with 2FA require an authenticator c
 
 ## 👻 Protection before login
 
-Unauthenticated players remain *hidden from other players* *[WIP]* and cannot freely interact with the server.
+Unauthenticated players remain hidden from other players and cannot freely interact with the server.
 
 Restrictions cover movement, chat, commands, inventory changes, item drops and pickups, attacks, entity interactions, hand swapping, item consumption, portals and mounting. Authentication commands and the PIN GUI remain available where required.
 
@@ -63,7 +63,7 @@ Optional reconnect sessions reduce repeated logins. Sessions are checked against
 
 Premium Auto-Login is also available, with a configurable same-IP requirement.
 
-## 🌐 Server networks [WIP - Work In Progress]
+## 🌐 Server networks
 
 PureAuth includes separate modules for **Paper/Purpur**, **Velocity** and **BungeeCord**.
 
