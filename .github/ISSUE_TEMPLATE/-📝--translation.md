@@ -8,7 +8,7 @@ type: Bug
 
 ---
 
-**Create a performance error report for the plugin.**
+**Create a translation error report for the plugin.**
 
 *-> The report should include a video recording/screenshot or a console log entry (if applicable)*
 |
