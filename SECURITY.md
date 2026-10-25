@@ -7,6 +7,7 @@ Supported versions will receive security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 6.3.1   |         YES        |
 | 6.3.0   |         YES        |
 | 6.2.0   |         YES        |
 | 6.1.0   |         YES        |
